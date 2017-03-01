@@ -1,0 +1,169 @@
+
+* {
+  position: static;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box; // do this or padding will break your layout
+}
+
+// normaly in _base.scss
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+}
+
+@keyframes sunset {
+  0% {
+    background: yellow;
+  }
+
+  20% {
+    background: orange;
+  }
+
+  46% {
+    background: salmon;
+  }
+
+  80% {
+    background: purple;
+    transform: scale(0.9) skew(10deg);
+  }
+
+  100% {
+    background: black;
+  }
+}
+
+.layout {
+  height: 100%;
+  background-color: blue;
+
+  .header, .footer {
+    height: 10%;
+    background: red;
+  }
+
+  .footer {
+    animation: sunset;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background: white;
+  }
+
+  .article {
+    display: inline-block;
+    width: 50%;
+    height: 80%;
+    background: yellow;
+    float: left;
+  }
+
+  .story {
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+    background: orange;
+    float: right;
+    transition: 500ms;
+    &:hover {
+      height: 10%;
+      width: 25%;
+      background: black;
+      transform: rotate(45deg);
+    }
+  }
+
+  .adds, .subs {
+    display: inline-block;
+    width: 25%;
+    height: 20%;
+    background: cyan;
+    float: right;
+  }
+
+  .other {
+    display: inline-block;
+    width: 25%;
+    height: 40%;
+    background: salmon;
+    float: left;
+    padding: 1em;
+    overflow: scroll;
+  }
+
+  .subs {
+    background: violet;
+  }
+
+  .spam {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 25%;
+    background: black;
+    color: white;
+    p {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+    }
+  }
+
+
+  .x-button {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 10px;
+    right: 10px;
+    background: magenta;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 8px;
+    left: 12.5%;
+    margin: 0 auto;
+    width: 75%;
+    height: 10%;
+    background: green;
+  }
+
+
+  .icon-anchor {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    &::before {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      content: " ";
+      background: url('../../assets/anchor.svg');
+      background-size: 1em 1em;
+    }
+  }
+
+  .icon-anchor-2x {
+    @extend .icon-anchor;
+    width: 2em;
+    height: 2em;
+    &::before {
+      width: 2em;
+      height: 2em;
+      background-size: 2em 2em;
+    }
+  }
+}
+
+

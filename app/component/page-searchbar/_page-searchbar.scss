@@ -1,0 +1,20 @@
+@import "../../scss/_theme.scss";
+
+.page-searchbar {
+  background: $c-greylight;
+
+  ul {
+    display: none;
+  }
+
+  .search-input:focus + ul {
+    display: block;
+  }
+
+  &:hover ul {
+    display: block;
+  }
+
+}
+
+

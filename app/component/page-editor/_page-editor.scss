@@ -1,0 +1,43 @@
+@import  "../../scss/_theme.scss";
+
+.page-editor {
+  textarea {
+    height: 20vh;;
+    background: $c-black;
+    color: $c-white;
+  }
+
+  input[type="text"] {
+    display: inline-block;
+    width: 30%;
+    float: left;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 4%;
+  }
+
+  input + label {
+    background: $c-error;
+  }
+
+  input[type="checkbox"]:checked + label {
+    background: $c-success; 
+  }
+
+
+  button {
+    display: inline-block;
+    width: 30%;
+    float: right;
+  }
+  
+}

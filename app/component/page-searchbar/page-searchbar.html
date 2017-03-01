@@ -1,0 +1,11 @@
+<div class="page-searchbar">
+  <input class="search-input" ng-model="$ctrl.searchterm">
+
+  <ul>
+    <li 
+      ng-repeat="item in $ctrl.pages |pageSearchFilter:$ctrl.searchterm " 
+      ng-click="$ctrl.handleSelect(item)"> 
+      {{ item.title }}  
+    </li>
+  </ul>
+</div>
