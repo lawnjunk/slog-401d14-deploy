@@ -46,6 +46,7 @@
     "superagent": "^3.4.4",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
+    "webpack-clean-plugin": "^0.2.3",
     "webpack-dev-server": "^2.4.1"
   }
 }
