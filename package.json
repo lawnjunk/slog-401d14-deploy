@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.2"
+  },
   "scripts": {
     "start": "node main.js",
+    "heroku-postbuild": "./node_modules/webpack/bin/webpack.js",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "test": "./node_modules/mocha/bin/mocha ./server/test"
   },
