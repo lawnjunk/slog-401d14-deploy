@@ -1,3 +1,4 @@
+build
 .env
 mock-env.js
 service-accounts.json

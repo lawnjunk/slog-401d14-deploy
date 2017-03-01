@@ -22,7 +22,19 @@ require('angular').module('slog')
         pageService.create(page)
         .then(page => {
           $log.log('success', page)
-          this.pageSelectPages.push(page);
+          let found = false;
+
+          // repace the page if it was allready in the array
+          this.pageSelectPages.map(item => {
+            if(page.id ==  item.id){
+              found = true;
+              return page;
+            }
+            return item;
+          })
+
+          // otherwise push the new page in the array
+          if(!found) this.pageSelectPages.push(page)
           this.pageEditorPage = {title: '', content: '', showInNav: false}
         })
         .catch($log.error)
